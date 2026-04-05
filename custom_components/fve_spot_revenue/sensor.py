@@ -9,11 +9,11 @@ from homeassistant.components.sensor import (
     SensorEntity,
     SensorStateClass,
     SensorDeviceClass,
+    RestoreSensor,
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from homeassistant.helpers.restore_state import RestoreSensor
 from homeassistant.helpers.event import async_track_state_change_event, async_track_time_change
 import homeassistant.util.dt as dt_util
 
