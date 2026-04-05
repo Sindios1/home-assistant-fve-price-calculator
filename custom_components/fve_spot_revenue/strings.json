@@ -7,8 +7,8 @@
         "data": {
           "export_sensor": "Export Energy Sensor (kWh)",
           "price_mode": "Price Mode",
-          "price_sensor": "SPOT Price Sensor (in MWh)",
-          "fixed_price": "Fixed Price (per MWh)",
+          "price_sensor": "SPOT Price Sensor (in kWh)",
+          "fixed_price": "Fixed Price (per kWh)",
           "fee_per_mwh": "Fee per sold MWh",
           "monthly_fee": "Fixed Monthly Fee"
         }

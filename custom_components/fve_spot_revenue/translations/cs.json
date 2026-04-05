@@ -7,8 +7,8 @@
         "data": {
           "export_sensor": "Senzor exportované energie (v kWh)",
           "price_mode": "Režim ceny",
-          "price_sensor": "Senzor SPOT ceny (za 1 MWh)",
-          "fixed_price": "Fixní výkupní cena (za 1 MWh)",
+          "price_sensor": "Senzor SPOT ceny (za 1 kWh)",
+          "fixed_price": "Fixní výkupní cena (za 1 kWh)",
           "fee_per_mwh": "Poplatek za každou prodanou MWh",
           "monthly_fee": "Měsíční poplatek provozovateli"
         }

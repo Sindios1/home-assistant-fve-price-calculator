@@ -139,22 +139,23 @@ class FveRevenueSensor(RestoreSensor, SensorEntity):
         if delta_kwh <= 0:
             return
 
-        delta_mwh = delta_kwh / 1000.0
-
-        # Get current price
-        current_price = self._fixed_price
+        # Get current price (assumed in CZK per kWh)
+        current_price_kwh = self._fixed_price
         if self._price_mode == PRICE_MODE_SPOT and self._price_sensor_id:
             price_state = self.hass.states.get(self._price_sensor_id)
             if price_state is not None:
                 try:
-                    current_price = float(price_state.state)
+                    current_price_kwh = float(price_state.state)
                 except ValueError:
                     _LOGGER.warning("Could not parse spot price: %s", price_state.state)
                     # If we can't parse price, we shouldn't calculate revenue for this delta
                     return
 
-        # Calculate revenue increment
-        revenue_inc = delta_mwh * (current_price - self._fee_per_mwh)
+        # Fee is configured in MWh, convert into kWh margin
+        fee_per_kwh = self._fee_per_mwh / 1000.0
+
+        # Calculate revenue increment: Volume(kWh) * (Price(per kWh) - Fee(per kWh))
+        revenue_inc = delta_kwh * (current_price_kwh - fee_per_kwh)
         self._state += revenue_inc
         self.async_write_ha_state()
 
