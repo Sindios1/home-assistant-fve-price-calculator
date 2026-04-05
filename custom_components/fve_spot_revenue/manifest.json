@@ -1,0 +1,12 @@
+{
+  "domain": "fve_spot_revenue",
+  "name": "FVE SPOT Revenue CZ",
+  "config_flow": true,
+  "documentation": "https://github.com/blahic/fve_spot_revenue",
+  "issue_tracker": "https://github.com/blahic/fve_spot_revenue/issues",
+  "dependencies": [],
+  "codeowners": ["@antigravity"],
+  "requirements": [],
+  "iot_class": "local_polling",
+  "version": "1.0.0"
+}

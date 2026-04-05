@@ -1,0 +1,33 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure FVE SPOT Revenue CZ",
+        "description": "Set up your FVE export and price calculations.",
+        "data": {
+          "export_sensor": "Export Energy Sensor (kWh)",
+          "price_mode": "Price Mode",
+          "price_sensor": "SPOT Price Sensor (in MWh)",
+          "fixed_price": "Fixed Price (per MWh)",
+          "fee_per_mwh": "Fee per sold MWh",
+          "monthly_fee": "Fixed Monthly Fee"
+        }
+      }
+    },
+    "error": {
+      "missing_spot_sensor": "You must select a price sensor for the SPOT mode.",
+      "missing_fixed_price": "You must enter a fixed price for the Fixed mode."
+    },
+    "abort": {
+      "already_configured": "Device is already configured"
+    }
+  },
+  "selector": {
+    "price_mode": {
+      "options": {
+        "spot": "SPOT Price (Sensor)",
+        "fixed": "Fixed Price"
+      }
+    }
+  }
+}

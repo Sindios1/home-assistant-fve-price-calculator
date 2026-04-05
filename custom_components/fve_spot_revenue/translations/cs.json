@@ -1,0 +1,33 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Nastavení FVE výnosů (SPOT)",
+        "description": "Nastavení senzorů pro výpočet výnosů z přetoků.",
+        "data": {
+          "export_sensor": "Senzor exportované energie (v kWh)",
+          "price_mode": "Režim ceny",
+          "price_sensor": "Senzor SPOT ceny (za 1 MWh)",
+          "fixed_price": "Fixní výkupní cena (za 1 MWh)",
+          "fee_per_mwh": "Poplatek za každou prodanou MWh",
+          "monthly_fee": "Měsíční poplatek provozovateli"
+        }
+      }
+    },
+    "error": {
+      "missing_spot_sensor": "Musíte vybrat senzor SPOT ceny.",
+      "missing_fixed_price": "Musíte zadat fixní cenu."
+    },
+    "abort": {
+      "already_configured": "Zařízení je již nastaveno."
+    }
+  },
+  "selector": {
+    "price_mode": {
+      "options": {
+        "spot": "SPOT cena ze senzoru",
+        "fixed": "Fixní cena"
+      }
+    }
+  }
+}
